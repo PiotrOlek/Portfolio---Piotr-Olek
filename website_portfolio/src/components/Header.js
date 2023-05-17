@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../images/logo.png';
+import WebFont from 'webfontloader';
 
 function Header() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Roboto:400,500,700']
+      }
+    });
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
