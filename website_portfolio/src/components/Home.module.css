@@ -42,7 +42,13 @@
 .imageContainer img {
   max-width: 80%;
   height: auto;
+  border-radius: 10px;
 }
+
+.imageContainer img:hover {
+  transform: scale(1.1);
+}
+
 
 @keyframes slide-in-left {
   from {
