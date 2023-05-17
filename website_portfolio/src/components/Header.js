@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../images/logo.png';
 import WebFont from 'webfontloader';
@@ -13,6 +13,8 @@ function Header() {
     });
   }, []);
 
+  const location = useLocation();
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -20,22 +22,22 @@ function Header() {
       </div>
       <nav className={styles.nav}>
         <ul>
-          <li>
+          <li className={location.pathname === '/' ? styles.active : ''}>
             <Link to="/">Strona główna</Link>
           </li>
-          <li>
+          <li className={location.pathname === '/about' ? styles.active : ''}>
             <Link to="/about">O mnie</Link>
           </li>
-          <li>
+          <li className={location.pathname === '/education-experience' ? styles.active : ''}>
             <Link to="/education-experience">Edukacja i Doświadczenie</Link>
           </li>
-          <li>
+          <li className={location.pathname === '/skills' ? styles.active : ''}>
             <Link to="/skills">Umiejętności</Link>
           </li>
-          <li>
+          <li className={location.pathname === '/projects' ? styles.active : ''}>
             <Link to="/projects">Projekty</Link>
           </li>
-          <li>
+          <li className={location.pathname === '/contact' ? styles.active : ''}>
             <Link to="/contact">Kontakt</Link>
           </li>
         </ul>

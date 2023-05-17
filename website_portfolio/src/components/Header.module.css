@@ -48,4 +48,18 @@
     width: auto;
     margin-right: 5px;
   }
+
+  .nav li a {
+    color: #85C75A;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+  }
   
+  .nav li.active a {
+    color: #fff;
+  }
+  
+  .nav li:hover a {
+    color: #fff;
+  }

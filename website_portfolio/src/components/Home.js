@@ -9,10 +9,7 @@ function Home() {
       <div className={styles.content}>
         <div className={styles.textContainer}>
           <CSSTransition in={true} appear={true} timeout={1000} classNames={styles} unmountOnExit>
-            <h2>Strona Główna</h2>
-          </CSSTransition>
-          <CSSTransition in={true} appear={true} timeout={1000} classNames={styles} unmountOnExit>
-            <p>Witaj na mojej stronie portfolio!</p>
+            <h3>Witaj na mojej stronie!</h3>
           </CSSTransition>
           <CSSTransition in={true} appear={true} timeout={1000} classNames={styles} unmountOnExit>
             <p>Mam na imię Piotr, pasjonuję się programowaniem i tworzeniem aplikacji webowych.</p>
