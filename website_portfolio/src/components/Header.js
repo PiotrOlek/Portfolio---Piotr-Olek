@@ -25,9 +25,6 @@ function Header() {
           <li className={location.pathname === '/' ? styles.active : ''}>
             <Link to="/">Strona główna</Link>
           </li>
-          <li className={location.pathname === '/about' ? styles.active : ''}>
-            <Link to="/about">O mnie</Link>
-          </li>
           <li className={location.pathname === '/education-experience' ? styles.active : ''}>
             <Link to="/education-experience">Edukacja i Doświadczenie</Link>
           </li>
