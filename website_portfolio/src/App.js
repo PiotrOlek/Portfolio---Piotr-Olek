@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import ProjectCard from './components/ProjectCard';
-import EducationAndExperience from './components/EducationAndExperience';
 import Skills from './components/Skills';
 import './BurgerButton.css';
 
@@ -25,7 +24,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<ProjectCard />} />
-          <Route path="/education-experience" element={<EducationAndExperience />} />
           <Route path="/skills" element={<Skills />} />
         </Routes>
       </div>
