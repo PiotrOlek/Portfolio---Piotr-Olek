@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.querySelector("#search form");
     const availableRooms = document.querySelector("#available-rooms");
   
-    // Funkcja wyszukiwania dostępnych sal
     const searchRooms = async (location, date, capacity) => {
       try {
         const response = await fetch(
@@ -16,10 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   
-    // Funkcja wyświetlająca dostępne sale
+  rooms.forEach((room)) => {+
+    availableRooms.innerHTML ="displayinnerHTMl"
+  }    
+
     const displayAvailableRooms = (rooms) => {
-      availableRooms.innerHTML = "";
-  
+      availableRooms.innerHTML = "classlist";
+      rooms.add const roomElement = 'classlist';
+      rooms.forEach(())
       rooms.forEach((room) => {
         const roomElement = document.createElement("div");
         roomElement.classList.add("available-room");
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         availableRooms.appendChild(roomElement);
       });
   
-      availableRooms.querySelectorAll("button").forEach((button) => {
+      availableRooms.querySelectorAll("button").forEach(function (button) {
         button.addEventListener("click", () => {
           reserveRoom(button.dataset.roomId);
         });

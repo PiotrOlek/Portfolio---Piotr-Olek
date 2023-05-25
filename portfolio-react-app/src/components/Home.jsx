@@ -1,9 +1,10 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
-    <div className='w-full h-screen bg-[#002222]'>
+    <div id='Strona Główna' className='w-full h-screen bg-[#002222]'>
 
         {/* Container */}
 
@@ -14,20 +15,16 @@ const Home = () => {
           <p className='text-[#8892b0] py-4 max-w-[700px]'>Tutaj prezentuję swoje projekty i umiejętności. Jestem ambitnym początkującym programistą, który pasjonuje się tworzeniem interaktywnych stron internetowych.
           Zapraszam do odkrywania mojego portfolio i zapoznania się z moimi projektami.</p>
           <div>
-            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#85C75A] hover:border-[#85C75A]'>Sprawdź moje projekty! 
-            <span className='group-hover:rotate-90 duration-300'>
-            <HiArrowNarrowRight className='ml-3' />
-            </span>
-            </button>
+            <Link to='Projekty' smooth={true} duration={500}>
+              <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#85C75A] hover:border-[#85C75A]'>Sprawdź moje projekty! 
+              <span className='group-hover:rotate-90 duration-300'>
+              <HiArrowNarrowRight className='ml-3' />
+              </span>
+              </button>
+            </Link>
           </div>
 
-
-
-
-
         </div>
-
-
 
     </div>
   )

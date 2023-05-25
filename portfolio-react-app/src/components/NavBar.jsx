@@ -18,27 +18,27 @@ const NavBar = () => {
       {/* Menu */}
       <ul className='hidden md:flex' style={{ marginTop: '70px' }}>
   <li style={{ fontSize: '20px' }}>
-  <Link to='home' smooth={true} duration={500}>
+  <Link to='Strona Główna' smooth={true} duration={500}>
     Strona Główna
   </Link>
     </li>
   <li style={{ fontSize: '20px' }}>
-  <Link to='home' smooth={true} duration={500}>
+  <Link to='O mnie' smooth={true} duration={500}>
     O mnie
    </Link> 
   </li>
   <li style={{ fontSize: '20px' }}>
-  <Link to='home' smooth={true} duration={500}>
+  <Link to='Umiejętności' smooth={true} duration={500}>
     Umiejętności
    </Link> 
     </li>
   <li style={{ fontSize: '20px' }}>
-  <Link to='home' smooth={true} duration={500}>
+  <Link to='Projekty' smooth={true} duration={500}>
     Projekty
   </Link>
     </li>
   <li style={{ fontSize: '20px' }}>
-  <Link to='home' smooth={true} duration={500}>
+  <Link to='Kontakt' smooth={true} duration={500}>
     Kontakt
   </Link>  
     </li>
