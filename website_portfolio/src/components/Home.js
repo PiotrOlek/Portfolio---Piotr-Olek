@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Home.module.css';
 import photo from '../images/photo.jpg';
 import { CSSTransition } from 'react-transition-group';
+import linkedinLogo from '../images/linkedin.png';
+import githubLogo from '../images/github.png';
 
 function Home() {
   return (
@@ -32,11 +34,29 @@ function Home() {
           <CSSTransition in={true} appear={true} timeout={1000} classNames={styles} unmountOnExit>
             <p>Zapraszam do odkrywania moich projektów i twórczości!</p>
           </CSSTransition>
-        </div>
+          </div>
         <div className={styles.imageContainer}>
           <img src={photo} alt="Photo" />
         </div>
+        </div>
+      <div className={styles.socialContainer}>
+        <a href="https://www.linkedin.com/in/piotr-olek-03b0b71a3/?originalSubdomain=pl" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinLogo} alt="LinkedIn" />
+      </a>
+        <a href="https://github.com/PiotrOlek/Portfolio---Piotr-Olek" target="_blank" rel="noopener noreferrer">
+          <img src={githubLogo} alt="GitHub" />
+      </a>
       </div>
+
+      <div className={styles.LinkedinHeader}>
+      <h3>Mój profil Linkedin</h3>
+      </div>
+
+      <div className={styles.GithubHeader}>
+      <h3>Mój profil Github</h3>
+      </div>
+
+
     </section>
   );
 }
