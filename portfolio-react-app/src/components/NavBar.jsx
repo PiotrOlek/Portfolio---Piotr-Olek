@@ -57,11 +57,31 @@ const NavBar = () => {
       <ul
         className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#002222] flex flex-col justify-center items-center'}
       >
-        <li className='py-6 text-4xl'>Strona Główna</li>
-        <li className='py-6 text-4xl'>O mnie</li>
-        <li className='py-6 text-4xl'>Umiejętności</li>
-        <li className='py-6 text-4xl'>Projekty</li>
-        <li className='py-6 text-4xl'>Kontakt</li>
+        <li className='py-6 text-4xl'>
+        <Link to='Projekty' smooth={true} duration={500}>
+          Strona Główna
+        </Link>  
+          </li>
+        <li className='py-6 text-4xl'>
+        <Link to='Projekty' smooth={true} duration={500}>
+          O mnie
+          </Link>
+          </li>
+        <li className='py-6 text-4xl'>
+        <Link to='Projekty' smooth={true} duration={500}>
+          Umiejętności
+          </Link>
+          </li>
+        <li className='py-6 text-4xl'>
+        <Link to='Projekty' smooth={true} duration={500}>
+          Projekty
+          </Link>
+          </li>
+        <li className='py-6 text-4xl'>
+        <Link to='Projekty' smooth={true} duration={500}>
+          Kontakt
+          </Link>
+          </li>
       </ul>
 
       {/* Social icons */}
