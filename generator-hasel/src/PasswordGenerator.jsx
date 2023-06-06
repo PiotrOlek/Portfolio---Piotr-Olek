@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ClipLoader from 'react-spinners/ClipLoader';
 import './PasswordGenerator.css';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 function PasswordGenerator() {
   const [password, setPassword] = useState('');
@@ -88,57 +88,62 @@ function PasswordGenerator() {
         />
       </label>
       <div className="options-grid">
-        <label>
-          Użyj małych liter:
+        <label className="custom-checkbox">
           <input
             type="checkbox"
             checked={useLowercase}
             onChange={(e) => setUseLowercase(e.target.checked)}
           />
+          <span className="custom-checkbox-label"></span>
+          Użyj małych liter
         </label>
-        <label>
-          Użyj dużych liter:
+        <label className="custom-checkbox">
           <input
             type="checkbox"
             checked={useUppercase}
             onChange={(e) => setUseUppercase(e.target.checked)}
           />
+          <span className="custom-checkbox-label"></span>
+          Użyj dużych liter
         </label>
-        <label>
-          Użyj cyfr:
+        <label className="custom-checkbox">
           <input
             type="checkbox"
             checked={useNumbers}
             onChange={(e) => setUseNumbers(e.target.checked)}
           />
+          <span className="custom-checkbox-label"></span>
+          Użyj cyfr
         </label>
-        <label>
-          Użyj znaków specjalnych:
+        <label className="custom-checkbox">
           <input
             type="checkbox"
             checked={useSpecialCharacters}
             onChange={(e) => setUseSpecialCharacters(e.target.checked)}
           />
+          <span className="custom-checkbox-label"></span>
+          Użyj znaków specjalnych
         </label>
       </div>
-      <button onClick={generatePassword} disabled={isGenerateButtonDisabled}>
+      <button className="generate-button" onClick={generatePassword} disabled={isGenerateButtonDisabled}>
         Generuj hasło
       </button>
       <ClipLoader color={'#123abc'} loading={isLoading} size={50} />
-      <input type="text" value={password} readOnly />
+      <input type="text" id="password" value={password} readOnly />
       <div className="password-strength-bar">
         <div
+          className="password-strength-bar-fill"
           style={{
-            width: `${passwordStrength * 25}%`,
-            backgroundColor: passwordStrength === 0 ? '#ccc' : passwordStrength === 1 ? 'red' : passwordStrength === 2 ? 'yellow' : 'green',
+            width: `${passwordStrength * 20}%`
           }}
         />
       </div>
-      <button onClick={() => copyToClipboard(password)}>Kopiuj hasło</button>
-      <button onClick={generateOTP}>Generuj OTP</button>
+      <p className="password-strength-text">Siła hasła: {passwordStrength}/5</p>
+      <button className="copy-button" onClick={() => copyToClipboard(password)}>Kopiuj hasło</button>
+      <button className="otp-button" onClick={generateOTP}>Generuj OTP</button>
       <ClipLoader color={'#123abc'} loading={isLoading} size={50} />
-      <input type="text" value={otp} readOnly />
-      <button onClick={() => copyToClipboard(otp)}>Kopiuj OTP</button>
+      <input type="text" id="otp" value={otp} readOnly />
+      <button className="copy-button" onClick={() => copyToClipboard(otp)}>Kopiuj OTP</button>
     </div>
   );
 }
