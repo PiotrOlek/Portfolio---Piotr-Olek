@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  margin-top: 40px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+.board {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  background-color: #f2f2f2;
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.snake-segment {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+}
+
+.snake-head {
+  background-color: #ff0000;
+}
+
+.food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00ff00;
+}
+
+.score {
+  margin-top: 20px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
