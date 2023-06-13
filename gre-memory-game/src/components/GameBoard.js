@@ -26,6 +26,7 @@ const GameBoard = () => {
   const [gameOver, setGameOver] = useState(false);
   const [timer, setTimer] = useState(0);
   const [score, setScore] = useState(0);
+  const [matchedPairs, setMatchedPairs] = useState([]);  // Nowa linia
 
   useEffect(() => {
     let interval = null;
@@ -48,6 +49,7 @@ const GameBoard = () => {
       if (cards[flippedIndexes[0]].id === clickedCard.id && flippedIndexes[0] !== clickedIndex) {
         setCorrectPairs(correctPairs + 1);
         setScore(score + 1);
+        setMatchedPairs([...matchedPairs, flippedIndexes[0], clickedIndex]);
         setFlippedIndexes(prev => [...prev, clickedIndex]);
         if (correctPairs + 1 === cards.length / 2) {
           setGameOver(true);
@@ -59,6 +61,7 @@ const GameBoard = () => {
       setFlippedIndexes([clickedIndex]);
     }
   }
+
 
   return (
     <div className="GameBoard">
@@ -74,20 +77,26 @@ const GameBoard = () => {
       )}
       {gameStarted && (
         <>
-          {cards.map((card, index) => (
-            <Card 
-              key={index} 
-              card={card} 
-              onCardClick={() => handleCardClick(card, index)} 
-              isFlipped={flippedIndexes.includes(index)} 
-            />
-          ))}
-          <p>Poprawne pary: {correctPairs}</p>
-          <p>Czas: {timer} sekund</p>
+          <div className="cards">
+            {cards.map((card, index) => (
+              <Card 
+                key={index} 
+                card={card} 
+                onCardClick={() => handleCardClick(card, index)} 
+                isFlipped={flippedIndexes.includes(index) || matchedPairs.includes(index)}
+              />
+            ))}
+          </div>
+          <div className="info">
+            <p>Poprawne pary: {correctPairs}</p>
+            <p>Czas: {timer} sekund</p>
+          </div>
         </>
       )}
     </div>
   );
 };
+
+
 
 export default GameBoard;
