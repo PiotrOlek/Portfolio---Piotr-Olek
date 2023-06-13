@@ -1,20 +1,12 @@
 .Card {
-  perspective: 1000px;
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   margin: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  transition: transform 0.6s, box-shadow 0.6s;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  background: #fff;
-}
-
-.Card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-  transform: scale(1.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .Card-flip {
@@ -34,16 +26,15 @@
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
-  transition: all 0.6s ease-in-out;
 }
 
 .Card-front {
-  background: linear-gradient(to right, #B8DFFB 0%, #B2C4FB 100%);
-  color: #1B1829;
+  background-color: #fff;
+  color: #333;
 }
 
 .Card-back {
   transform: rotateY(180deg);
-  background-color: #FFC947;
+  background-color: #333;
   color: #fff;
 }

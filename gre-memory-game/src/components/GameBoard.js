@@ -25,8 +25,8 @@ const GameBoard = () => {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [timer, setTimer] = useState(0);
-  const [score, setScore] = useState(0);
-  const [matchedPairs, setMatchedPairs] = useState([]);  // Nowa linia
+  const [matchedPairs, setMatchedPairs] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     let interval = null;
@@ -48,11 +48,11 @@ const GameBoard = () => {
     if (flippedIndexes.length === 1) {
       if (cards[flippedIndexes[0]].id === clickedCard.id && flippedIndexes[0] !== clickedIndex) {
         setCorrectPairs(correctPairs + 1);
-        setScore(score + 1);
         setMatchedPairs([...matchedPairs, flippedIndexes[0], clickedIndex]);
         setFlippedIndexes(prev => [...prev, clickedIndex]);
         if (correctPairs + 1 === cards.length / 2) {
           setGameOver(true);
+          setShowNotification(true);
         }
       } else {
         setFlippedIndexes([clickedIndex]);
@@ -62,41 +62,47 @@ const GameBoard = () => {
     }
   }
 
+  const handlePlayAgain = () => {
+    setCards(shuffleArray(cardsData));
+    setFlippedIndexes([]);
+    setCorrectPairs(0);
+    setGameStarted(true);
+    setGameOver(false);
+    setTimer(0);
+    setMatchedPairs([]);
+    setShowNotification(false);
+  }
 
   return (
     <div className="GameBoard">
       {!gameStarted && (
         <button onClick={() => setGameStarted(true)}>Rozpocznij grę</button>
       )}
-      {gameOver && (
-        <>
-          <button onClick={() => setGameStarted(false)}>Zagraj ponownie</button>
-          <p>Twój czas: {timer} sekund</p>
-          <p>Twój wynik: {score}</p>
-        </>
-      )}
       {gameStarted && (
         <>
           <div className="cards">
             {cards.map((card, index) => (
-              <Card 
-                key={index} 
-                card={card} 
-                onCardClick={() => handleCardClick(card, index)} 
+              <Card
+                key={index}
+                card={card}
+                onCardClick={() => handleCardClick(card, index)}
                 isFlipped={flippedIndexes.includes(index) || matchedPairs.includes(index)}
               />
             ))}
           </div>
           <div className="info">
-            <p>Poprawne pary: {correctPairs}</p>
             <p>Czas: {timer} sekund</p>
           </div>
         </>
       )}
+      {gameOver && (
+        <div className={`notification ${showNotification ? 'show' : ''}`}>
+          <p>Twój czas: {timer} sekund</p>
+          <button onClick={handlePlayAgain}>Zagraj ponownie</button>
+        </div>
+      )}
     </div>
   );
 };
-
-
 
 export default GameBoard;
