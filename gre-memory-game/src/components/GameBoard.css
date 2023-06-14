@@ -10,15 +10,15 @@
 }
 
 .GameBoard button {
-  font-size: 50px;
+  font-size: 30px;
   color: #fff;
   background: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   width: 400px;
   height: 100px;
@@ -34,19 +34,24 @@
 }
 
 .GameBoard p {
-  font-size: 24px;
-  font-family: serif;
-  color: #333;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-}
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  color: #4a4a4a;
+  margin: 20px;
+  border: 2px solid #f39c12;
+  background-color: #fdf6e3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+}  
+
+
 
 .GameBoard .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
   justify-items: center;
   width: 80%;
   margin: auto;
