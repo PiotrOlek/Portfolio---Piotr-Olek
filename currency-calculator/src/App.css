@@ -1,0 +1,52 @@
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('https://vistapointe.net/images/currency-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.converter-wrapper {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.currency-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Dodane wyśrodkowanie elementów wzdłuż osi Y */
+  margin-bottom: 20px;
+}
+
+.input,
+.select {
+  width: 100px; /* Zwiększono szerokość pól wejściowych i pól wyboru */
+  height: 30px; /* Dodano wysokość pól wejściowych i pól wyboru */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.select {
+  background-color: #f4f6ff; /* Dodano tło dla pól wyboru */
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px; /* Zwiększono rozmiar czcionki H1 */
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #000000; /* Ustawiono kolor tekstu na biały */
+  margin-bottom: 20px;
+}
