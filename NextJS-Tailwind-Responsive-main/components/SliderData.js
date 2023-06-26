@@ -1,31 +1,19 @@
 export const SliderData = [
     {
       image:
+        'https://images.unsplash.com/photo-1687785192655-9355949da18a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1687785205892-374fff031be0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1687705411099-884b092066a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
+    },
+    {
+      image:
         'https://images.unsplash.com/photo-1687708795929-c73e4eba1070?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687710025896-1f765e6a699c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687705247101-c6b4b404ae1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687705289010-d0a714644104?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687705309900-a7f8fc13bd3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687705334084-18b5fd19c3ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1687705373841-092343cfbfc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
     },
   ];
   
